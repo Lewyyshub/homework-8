@@ -1,0 +1,18 @@
+.Image-Div {
+  max-width: 472px;
+  height: 359px;
+  flex-shrink: 0;
+  position: relative;
+}
+.img1 {
+  width: 100%;
+}
+.box {
+  width: 90px;
+  height: 150px;
+  flex-shrink: 0;
+  position: absolute;
+  object-fit: cover;
+  top: 160px;
+  right:370px;
+}
