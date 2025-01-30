@@ -33,7 +33,7 @@ function Info() {
             quotes.map((quote, length) => (
               <div className="first" key={length}>
                 <p onClick={() => accordionToggle(length)} className="author">
-                  {quote.author}
+                  <span className="author-text">{quote.author}</span>
                   <span
                     className={`material-symbols-outlined ${
                       accordion === length ? "rotate" : ""
@@ -42,7 +42,14 @@ function Info() {
                     keyboard_arrow_down
                   </span>
                 </p>
-                {accordion === length && <span>{quote.quote}</span>}
+                <div
+                  className={`quote-container ${
+                    accordion === length ? "open" : ""
+                  }`}
+                >
+                  <span className="quotes">{quote.quote}</span>
+                </div>
+
                 <div className="line"></div>
               </div>
             ))}
